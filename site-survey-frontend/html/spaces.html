@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spaces</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <h2>🧱 Spaces</h2>
+  <button onclick="goDashboard()">Dashboard</button>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="main card">
+
+  <h3>All Available Spaces</h3>
+  <p>Below is the list of spaces available for site survey.</p>
+
+  <button onclick="loadSpaces()">Load Spaces</button>
+
+  <table class="space-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Space Name</th>
+        <th>Type</th>
+        <th>Floor</th>
+        <th>Building</th>
+      </tr>
+    </thead>
+    <tbody id="spaceTableBody">
+      <!-- Spaces will load here -->
+    </tbody>
+  </table>
+
+  <div id="message"></div>
+
+</div>
+
+<script src="../js/app.js"></script>
+
+<script>
+  // Auto-load spaces when page opens
+  loadSpaces();
+</script>
+
+</body>
+</html>

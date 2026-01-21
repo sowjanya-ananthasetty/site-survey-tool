@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab")
+    no-repeat center/cover;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+  max-width: 1100px;
+  margin: 30px auto 10px;
+  padding: 15px 25px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+/* ===== SUMMARY ===== */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+/* Add space below summary cards */
+.summary {
+  margin-bottom: 40px;   /* 👈 THIS fixes the issue */
+}
+
+/* Optional: ensure cards are separated */
+.card {
+  margin-top: 20px;
+}
+
+
+.summary-card {
+  background: rgba(255,255,255,0.2);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.summary-card span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ===== TABLE ===== */
+.space-table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+  color: white;
+}
+
+.space-table th,
+.space-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.space-table tbody tr:hover {
+  background: rgba(255,255,255,0.15);
+  cursor: pointer;
+}
+
+/* ===== FORMS ===== */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, #00eaff, #0077ff);
+  font-weight: bold;
+  cursor: pointer;
+}
+/* ==================================================
+   📱 MOBILE-FIRST DASHBOARD RESPONSIVENESS
+================================================== */
+
+/* -------- MOBILE (PHONES) -------- */
+@media (max-width: 600px) {
+
+  /* Top bar */
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .topbar h1 {
+    font-size: 20px;
+  }
+
+  .topbar button {
+    width: 100%;
+  }
+
+  /* Main container */
+  .main {
+    padding: 15px;
+  }
+
+  /* Summary cards stack */
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .summary-card {
+    padding: 15px;
+  }
+
+  .summary-card span {
+    font-size: 22px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 18px;
+  }
+
+  /* Buttons */
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Inputs */
+  input,
+  select {
+    font-size: 16px;
+  }
+
+  /* TABLE HANDLING */
+  .space-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .space-table th,
+  .space-table td {
+    font-size: 14px;
+  }
+}
+
+/* -------- TABLET -------- */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .topbar h1 {
+    font-size: 22px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+

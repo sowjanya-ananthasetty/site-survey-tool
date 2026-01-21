@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Properties</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h2>🏘 Properties</h2>
+  <button onclick="goDashboard()">Dashboard</button>
+</header>
+
+<div class="main card">
+
+  <table class="space-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Property Name</th>
+        <th>City</th>
+      </tr>
+    </thead>
+    <tbody id="propertyTable"></tbody>
+  </table>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script>
+  requireRole("ADMIN");
+  loadProperties();   // ✅ auto-load
+</script>
+
+</body>
+</html>

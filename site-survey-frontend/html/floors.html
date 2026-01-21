@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Floors</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h2>🏗 Floors</h2>
+  <button onclick="goDashboard()">Dashboard</button>
+</header>
+
+<div class="main card">
+
+  <table class="space-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Floor Number</th>
+        <th>Upload Plan</th>
+        <th>View Plan</th>
+      </tr>
+    </thead>
+    <tbody id="floorTable"></tbody>
+  </table>
+
+</div>
+
+<script src="../js/app.js"></script>
+<script>
+  requireRole("ADMIN");
+  loadFloors();   // ✅ auto-load using buildingId
+</script>
+
+</body>
+</html>

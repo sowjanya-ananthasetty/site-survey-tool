@@ -1,0 +1,160 @@
+/* =========================
+   BASE STYLES
+========================= */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+/* =========================
+   BACKGROUNDS
+========================= */
+.bg-home {
+  background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab')
+              no-repeat center/cover;
+}
+
+.bg-login {
+  background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b')
+              no-repeat center/cover;
+}
+
+.bg-register {
+  background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b')
+              no-repeat center/cover;
+}
+
+/* =========================
+   OVERLAY & GLASS
+========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.glass {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   LAYOUT CONTAINERS
+========================= */
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 100px auto;
+}
+
+.login-box {
+  position: relative;
+  z-index: 2;
+  width: 350px;
+  margin: 120px auto;
+  text-align: center;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(45deg, #00eaff, #0077ff);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* =========================
+   BUTTON LINKS
+========================= */
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 30px;
+  background: white;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ==================================================
+   📱 RESPONSIVE DESIGN (USER-REQUIREMENT FRIENDLY)
+================================================== */
+
+/* -------- MOBILE (PHONES) -------- */
+@media (max-width: 600px) {
+
+  .container {
+    margin: 60px 15px;
+    max-width: 100%;
+  }
+
+  .login-box {
+    width: 90%;
+    margin: 80px auto;
+  }
+
+  .glass {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  input,
+  button {
+    font-size: 16px; /* better for touch */
+  }
+
+  .buttons a {
+    width: 100%;
+    margin: 8px 0;
+    padding: 14px;
+  }
+}
+
+/* -------- TABLETS -------- */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .container {
+    margin: 80px auto;
+    max-width: 85%;
+  }
+
+  .login-box {
+    width: 420px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}

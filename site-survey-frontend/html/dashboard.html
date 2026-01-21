@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Site Survey Tool</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="top-left">
+    <h1>🏢 Site Survey Dashboard</h1>
+    <small id="welcomeUser"></small>
+  </div>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- ADMIN NAVIGATION -->
+  <section class="card">
+  <h2>Admin Management</h2>
+
+<div style="display:flex; gap:15px; flex-wrap:wrap;">
+
+  <!-- Properties -->
+  <a href="properties.html"
+     style="
+       padding:12px 24px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:8px;
+       font-weight:600;
+       box-shadow:0 4px 10px rgba(0,0,0,0.15);
+     ">
+    🏢 Properties
+  </a>
+
+  <!-- Buildings -->
+  <a href="buildings.html"
+     style="
+       padding:12px 24px;
+       background:#16a34a;
+       color:white;
+       text-decoration:none;
+       border-radius:8px;
+       font-weight:600;
+       box-shadow:0 4px 10px rgba(0,0,0,0.15);
+     ">
+    🏗 Buildings
+  </a>
+
+  <!-- Floors (DISABLED – INFO ONLY) -->
+  <span
+     title="Select a Building to view Floors"
+     style="
+       padding:12px 24px;
+       background:#9ca3af;
+       color:rgb(255, 255, 255);
+       border-radius:8px;
+       font-weight:600;
+       cursor:not-allowed;
+       opacity:0.7;
+     ">
+    🧱 Floors
+  </span>
+  <a href="spaces.html"
+     style="
+       padding:12px 24px;
+       background:#7c3aed;
+       color:rgb(255, 255, 255);
+       text-decoration:none;
+       border-radius:8px;
+       font-weight:600;
+       box-shadow:0 4px 10px rgba(0,0,0,0.15);
+     ">
+    🧩 Spaces
+  </a>
+
+</div>
+
+
+  </div>
+</section>
+
+
+  <!-- SUMMARY CARDS -->
+  <div class="summary">
+    <div class="summary-card">
+      <h3>Total Surveys</h3>
+      <span id="totalCount">-</span>
+    </div>
+    <div class="summary-card">
+      <h3>Drafts</h3>
+      <span id="draftCount">-</span>
+    </div>
+    <div class="summary-card">
+      <h3>Submitted</h3>
+      <span id="submittedCount">-</span>
+    </div>
+  </div>
+
+  <!-- STEP 1 -->
+  <section class="card">
+    <h2>Step 1: View Spaces</h2>
+    <button onclick="loadSpaces()">Load Spaces</button>
+
+    <table class="space-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Space Name</th>
+          <th>Type</th>
+          <th>Floor</th>
+          <th>Building</th>
+        </tr>
+      </thead>
+      <tbody id="spaceTableBody"></tbody>
+    </table>
+  </section>
+
+  <!-- STEP 2 -->
+  <section class="card">
+    <h2>Step 2: Fill Checklist</h2>
+    <div class="form-grid">
+      <input type="number" id="templateId" value="2">
+      <input type="text" id="targetType" value="SPACE" readonly>
+      <input type="number" id="targetId" placeholder="Target ID">
+      <select id="answer">
+        <option value="true">Power Available - YES</option>
+        <option value="false">Power Available - NO</option>
+      </select>
+    </div>
+    <button class="primary" onclick="saveDraft()">Save Draft</button>
+  </section>
+
+  <!-- STEP 3 -->
+  <section class="card">
+    <h2>Step 3: Submit Checklist</h2>
+    <input type="number" id="responseId" placeholder="Response ID">
+    <button class="warning" onclick="submitChecklist()">Submit Checklist</button>
+  </section>
+
+  <!-- STEP 4 -->
+  <section class="card">
+    <h2>Step 4: Download Report</h2>
+    <button class="success" onclick="downloadReport()">Download PDF Report</button>
+  </section>
+
+  <!-- STEP 5 -->
+  <section class="card">
+    <h2>Step 5: Checklist History</h2>
+    <a href="checklists.html">View Checklist History</a>
+  </section>
+
+  <div id="message"></div>
+
+</div>
+
+<script src="../js/app.js"></script>
+</body>
+</html>
