@@ -19,5 +19,5 @@ public class GeometryUpdateRequest {
 
     public void setGeometryData(String geometryData) {
         this.geometryData = geometryData;
-    }
+    } 
 }
