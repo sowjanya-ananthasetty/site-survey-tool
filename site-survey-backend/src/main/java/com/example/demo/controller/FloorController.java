@@ -88,7 +88,7 @@ public class FloorController {
                     return floorRepository.save(f);
                 })
                 .orElseThrow(() -> new RuntimeException("Floor not found"));
-    }
+    } 
 
     /* =========================
        DELETE FLOOR
