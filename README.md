@@ -29,10 +29,10 @@ This application allows users to manage properties, buildings, floors, and space
 
 ## Project Structure
 site-survey-tool/
-├── backend/ # Spring Boot backend application
-├── frontend/ # HTML, CSS, JavaScript frontend
-├── database/ # MySQL SQL dump (schema and data)
-└── README.md
+-backend/ # Spring Boot backend application
+-frontend/ # HTML, CSS, JavaScript frontend
+-database/ # MySQL SQL dump (schema and data)
+-README.md
 
 ## How to Run the Project
 
