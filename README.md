@@ -51,7 +51,6 @@ site-survey-tool/
    ```sql
    CREATE DATABASE site_survey;
 
-
 3. Import the SQL file:
    -Go to **Server → Data** Import
    -Select **Import from Self-Contained File**
